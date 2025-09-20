@@ -24,6 +24,8 @@ function App() {
     "1","2","3","-",
     "0",".","=","+"
   ]
+   const numbers = ["0","1","2","3","4","5","6","7","8","9","."];
+const isNumber = numbers.includes(item);
   return (
     <div className='flex justify-center items-center h-screen'>
       <div className='grid grid-cols-4 gap-2 border-1 p-8 pt-10 mt-5 h-110 w-70'>
@@ -31,7 +33,7 @@ function App() {
           {data || "0"}
         </div>
         {button.map((item,idx)=>{
-          return  <button onClick={()=>handle(item)} className='border-2 px-4 py-3 transition duration-200 active:scale-75 rounded'>
+          return  <button onClick={()=>handle(item)} className={`border-2 px-4 py-3 transition duration-200 active:scale-75 rounded font-bold bg-zinc-700 ${isNumber? "bg-zinc-900" : "bg-zinc-600"}`}>
             {item}
           </button>
           
