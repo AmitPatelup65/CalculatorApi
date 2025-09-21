@@ -27,8 +27,8 @@ function App() {
 
   return (
     <div className='flex justify-center items-center h-screen'>
-      <div className='grid grid-cols-4 gap-2 border-1 p-8 pt-10 mt-5 h-110 w-70'>
-          <div className='col-span-4 border-2 border-black text-black text-right p-2 rounded mb-3 text-2xl'>
+      <div className='grid grid-cols-4 gap-2 border-1 p-8 pt-10 mt-5 h-110 w-70 bg-emerald-700'>
+          <div className='col-span-4 border-2 bg-amber-300 border-black text-black text-right p-2 rounded mb-3 text-2xl'>
           {data || "0"}
         </div>
         {button.map((item,idx)=>{
